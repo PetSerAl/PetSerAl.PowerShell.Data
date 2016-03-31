@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="Build\Project.props" />
+  <PropertyGroup>
+    <ProjectGuid>{17F9537C-40D3-4DC7-B0CE-AD5C32825CA9}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetPowerShellVersion>v5.0</TargetPowerShellVersion>
+    <OutputPrefix>v5\</OutputPrefix>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <Import Project="Build\Project.PowerShell.afterprops" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management.Automation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assembly.cs" />
+    <Compile Include="DbProviderFactoryTransformationAttribute.cs" />
+    <Compile Include="DbProviderInvariantNameArgumentCompleter.cs" />
+    <Compile Include="Get-DbProviderFactory.cs" />
+    <Compile Include="Invoke-DbCommand.cs" />
+    <Compile Include="New-DbCommand.cs" />
+    <Compile Include="New-DbConnection.cs" />
+    <Compile Include="Not in .NET v2.0.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="ValidateEnumAttribute.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

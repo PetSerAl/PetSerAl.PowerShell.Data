@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="CopyToDestination" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Build\Build.props" />
+  <PropertyGroup>
+    <PowerShellModuleName>PetSerAl.Data</PowerShellModuleName>
+    <CommitParents>compiled/v1;HEAD</CommitParents>
+  </PropertyGroup>
+  <Import Project="Build\Build.PowerShell.afterprops" />
+  <ItemGroup>
+    <Project Include="PetSerAl.PowerShell.Data.csproj">
+      <OutputPrefix>v2-v2\</OutputPrefix>
+      <AdditionalProperties>TargetFrameworkVersion=v2.0;TargetPowerShellVersion=v2.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+    </Project>
+    <Project Include="PetSerAl.PowerShell.Data.csproj">
+      <OutputPrefix>v2-v35\</OutputPrefix>
+      <AdditionalProperties>TargetFrameworkVersion=v3.5;TargetPowerShellVersion=v2.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+    </Project>
+    <Project Include="PetSerAl.PowerShell.Data.csproj">
+      <OutputPrefix>v4\</OutputPrefix>
+      <AdditionalProperties>TargetFrameworkVersion=v4.0;TargetPowerShellVersion=v4.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+    </Project>
+    <Project Include="PetSerAl.PowerShell.Data.csproj">
+      <OutputPrefix>v5\</OutputPrefix>
+      <AdditionalProperties>TargetFrameworkVersion=v4.0;TargetPowerShellVersion=v5.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+    </Project>
+  </ItemGroup>
+  <ItemGroup>
+    <File Include="LICENSE" />
+    <File Include="PetSerAl.Data.psd1" />
+    <File Include="PetSerAl.Data.psm1" />
+  </ItemGroup>
+  <Import Project="Build\Build.targets" />
+</Project>
