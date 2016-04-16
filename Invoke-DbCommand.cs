@@ -13,7 +13,7 @@ namespace PetSerAl.PowerShell.Data {
         public DbConnection Connection { private get; set; }
         [Parameter(Mandatory = true, ParameterSetName = nameof(Connection), Position = 2), Alias("Query")]
         public string CommandText { private get; set; }
-        [Parameter(ParameterSetName = nameof(Command), Position = 2), Parameter(ParameterSetName = nameof(Connection), Position = 3), Alias("Params"), ValidateNotNull]
+        [Parameter(Position = 3), Alias("Params"), ValidateNotNull]
         public IDictionary Parameters { private get; set; }
         [Parameter, Alias("As"), ValidateEnum(typeof(CommandReturnType))]
         public CommandReturnType ReturnAs { private get; set; } = CommandReturnType.CustomObject;
