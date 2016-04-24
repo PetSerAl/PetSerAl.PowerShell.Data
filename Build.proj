@@ -8,20 +8,16 @@
   <Import Project="Build\Build.PowerShell.afterprops" />
   <ItemGroup>
     <Project Include="PetSerAl.PowerShell.Data.csproj">
-      <OutputPrefix>v2-v2\</OutputPrefix>
-      <AdditionalProperties>TargetFrameworkVersion=v2.0;TargetPowerShellVersion=v2.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+      <AdditionalProperties>TargetFrameworkVersion=v2.0;TargetPowerShellVersion=v2.0;OutputPrefix=v2-v2\</AdditionalProperties>
     </Project>
     <Project Include="PetSerAl.PowerShell.Data.csproj">
-      <OutputPrefix>v2-v35\</OutputPrefix>
-      <AdditionalProperties>TargetFrameworkVersion=v3.5;TargetPowerShellVersion=v2.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+      <AdditionalProperties>TargetFrameworkVersion=v3.5;TargetPowerShellVersion=v2.0;OutputPrefix=v2-v35\</AdditionalProperties>
     </Project>
     <Project Include="PetSerAl.PowerShell.Data.csproj">
-      <OutputPrefix>v4\</OutputPrefix>
-      <AdditionalProperties>TargetFrameworkVersion=v4.0;TargetPowerShellVersion=v4.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+      <AdditionalProperties>TargetFrameworkVersion=v4.0;TargetPowerShellVersion=v4.0;OutputPrefix=v4\</AdditionalProperties>
     </Project>
     <Project Include="PetSerAl.PowerShell.Data.csproj">
-      <OutputPrefix>v5\</OutputPrefix>
-      <AdditionalProperties>TargetFrameworkVersion=v4.0;TargetPowerShellVersion=v5.0;OutputPrefix=%(OutputPrefix)</AdditionalProperties>
+      <AdditionalProperties>TargetFrameworkVersion=v4.0;TargetPowerShellVersion=v5.0;OutputPrefix=v5\</AdditionalProperties>
     </Project>
   </ItemGroup>
   <ItemGroup>
